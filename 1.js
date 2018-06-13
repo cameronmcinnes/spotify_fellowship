@@ -39,10 +39,8 @@ function sortByString(s, t) {
 
 
 
-
-
 // Version using character Array (currently only works for lowercase
-// letters but could be configured for more characters)
+// standard alphabet but could be configured for more characters)
 // Time complexity O(n + m) where n is length of s and m is legnth of t
 // Space complexity O(n) where n is the length of s
 

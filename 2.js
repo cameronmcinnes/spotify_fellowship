@@ -1,24 +1,13 @@
-// Question 2 -- decodeString(s): Given an encoded string, return
-//its corresponding decoded string.
-//
-// The encoding rule is: k[encoded_string], where the encoded_string
-// inside the square brackets is repeated exactly k times. Note: k is
-// guaranteed to be a positive integer.
-//
-// For s = "4[ab]", the output should be decodeString(s) = "abababab"
-// For s = "2[b3[a]]", the output should be decodeString(s) = "baaabaaa"
-
 // Time complexity: O(n) where n is the length of input string
 // Space complexity: O(n)
 
-//TODO handle error of too many brackets?
-
-function decodeString(s) {
+function decodeString(str) {
   let stack = [];
 
-  for (let i of s) {
-    if (i !== ']') {
-        stack.push(i);
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+    if (char !== ']') {
+        stack.push(char);
     } else {
       let temp = "";
       while (stack[stack.length - 1] !== '[') {
@@ -53,5 +42,3 @@ function decodeString(s) {
   }
   return result;
 };
-
-// TODO recursive approach?
